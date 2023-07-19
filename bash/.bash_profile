@@ -13,7 +13,9 @@ alias ll="ls -lah"
 
 alias tmuxj="tmux attach-session -t "
 
-export EDITOR="vim"
+alias n='nvim -c ":E"'
+alias ni='nvim'
+export EDITOR="nvim"
 
 #parse_git_branch() {
 #         git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
