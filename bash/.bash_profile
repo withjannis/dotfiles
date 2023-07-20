@@ -13,7 +13,7 @@ alias ll="ls -lah"
 
 alias tmuxj="tmux attach-session -t "
 
-alias n='nvim -c ":E"'
+alias n='nvim -c ":NvimTreeOpen"'
 alias ni='nvim'
 export EDITOR="nvim"
 
