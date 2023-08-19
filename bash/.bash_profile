@@ -11,10 +11,9 @@ fi
 
 alias ll="ls -lah"
 
-alias tmuxj="tmux attach-session -t "
-
 alias n='nvim -c ":NvimTreeOpen"'
 alias ni='nvim'
+alias t='tmux a'
 export EDITOR="nvim"
 
 #parse_git_branch() {
