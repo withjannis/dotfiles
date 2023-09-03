@@ -14,6 +14,7 @@ alias ll="ls -lah"
 alias n='nvim -c ":NvimTreeOpen"'
 alias ni='nvim'
 alias t='tmux a'
+alias p='python3'
 export EDITOR="nvim"
 
 #parse_git_branch() {
