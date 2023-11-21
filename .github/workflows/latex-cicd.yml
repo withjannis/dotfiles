@@ -1,18 +1,20 @@
-name: Node CI
+name: LaTeX Template Build 
 
-on: [push]
+on:
+  - push
 
 jobs:
   build_and_test:
-    runs-on: islandoftex
+    runs-on: ubuntu-latest 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Run latexmk
         run: |
+          apt-get install -y latexmk
           cd latex
-          latexmk template.tex
+          latexmk template.tex -pdf
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
