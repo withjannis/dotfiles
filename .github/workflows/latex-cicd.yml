@@ -12,7 +12,7 @@ jobs:
 
       - name: Run latexmk
         run: |
-          apt-get install -y latexmk
+          sudo apt-get install -y latexmk
           cd latex
           latexmk template.tex -pdf
 
