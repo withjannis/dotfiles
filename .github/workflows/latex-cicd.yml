@@ -13,10 +13,7 @@ jobs:
         uses: docker://texlive/texlive:latest
         with:
           entrypoint: latex/template.tex
-          args:
-            - -cd
-            - latex/template.tex
-            - -pdf
+          args: -cd latex/template.tex -pdf
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
