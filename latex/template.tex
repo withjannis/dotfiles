@@ -1,0 +1,68 @@
+\documentclass{scrreprt}
+% language
+\usepackage{babel}
+\usepackage{ngerman}
+
+% color
+\usepackage{xcolor}
+% tables
+\usepackage{tabularx}
+% figures
+\usepackage{graphicx}
+% boxes
+\usepackage{tcolorbox}
+% header
+\usepackage{fancyhdr}
+
+\usepackage{lipsum}
+
+\title{Hello World}
+\subject{Jannis \LaTeX~template}
+\date{\today}
+\author{Jannis Imhof}
+
+\pagestyle{fancy}
+
+\pagecolor[rgb]{0.1,0.1,0.1} %black
+\color[rgb]{0.7,0.7,0.7} %grey
+
+\begin{document}
+\maketitle
+
+\chapter{Hello World!}
+
+\section{tcolorbox}
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=My nice heading]
+This is another \textbf{tcolorbox}.
+\tcblower
+Here, you see the lower part of the box.
+\end{tcolorbox}
+
+\begin{tcolorbox}
+This is another \textbf{tcolorbox}.
+\tcblower
+Here, you see the lower part of the box.
+\end{tcolorbox}
+
+\section{figure}
+\begin{figure}[!h]
+  \includegraphics{example-image}
+  \caption{An example image}
+  \label{fig:example}
+\end{figure}
+
+\section{table}
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{\textwidth}{Xll}
+        \hline
+        Alpha     & Beta     & Gamma     \\ \hline
+        0         & 2        & 4         \\ \hline
+        1         & 3        & 5         \\ \hline
+    \end{tabularx}
+\end{table}
+
+\lipsum[2-30]
+
+\end{document}
