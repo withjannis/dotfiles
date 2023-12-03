@@ -12,7 +12,7 @@ jobs:
       - name: Run latexmk
         uses: docker://texlive/texlive:latest
         with:
-          args: latexmk -cd latex/template.tex -pdf
+          args: latexmk -cd latex/template.tex -pdf -shell-escape
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:

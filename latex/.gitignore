@@ -1,7 +1,10 @@
+_minted-template/
 *.aux
 *.dvi
 *.fdb_latexmk
 *.fls
 *.log
+*.out
 *.pdf
-
+*.pyg
+*.toc
