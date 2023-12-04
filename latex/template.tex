@@ -31,6 +31,8 @@
 
 \renewcommand{\familydefault}{\sfdefault}
 
+\pagestyle{fancy}
+
 %%% Bibliography
 \addbibresource{bibliography.bib}
 %%%%%%
@@ -40,21 +42,20 @@
 \loadglsentries{glossary.tex}
 %%%%%%
 
-\pagestyle{fancy}
 \setminted{
     linenos=true,
 }
 
-%%% Darkmode
-\pgfplotsset{
-    legend style={fill=black,draw=white}
-    }
-\usemintedstyle{monokai}
-\pagecolor[rgb]{0.1,0.1,0.1} %black
-\color[rgb]{0.8,0.8,0.8} %grey
-%\pagecolor[rgb]{0.0,0.0,0.0} %black
-%\color[rgb]{1,1,1} %white
-%%%
+% %%% Darkmode
+% \pgfplotsset{
+%     legend style={fill=black,draw=white}
+%     }
+% \usemintedstyle{monokai}
+% \pagecolor[rgb]{0.1,0.1,0.1} %black
+% \color[rgb]{0.8,0.8,0.8} %grey
+% %\pagecolor[rgb]{0.0,0.0,0.0} %black
+% %\color[rgb]{1,1,1} %white
+% %%%
 
 
 %%% Titlepage
