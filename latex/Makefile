@@ -7,5 +7,4 @@ run:
 	make buildpdf
 
 buildpdf:
-	makeglossaries template 
 	latexmk template.tex -pdf -shell-escape
