@@ -1,6 +1,7 @@
 \documentclass{scrreprt}
 % language
-\usepackage{babel}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
 %\usepackage{ngerman}
 
 % color
@@ -19,12 +20,25 @@
 \usepackage{minted}
 % plots
 \usepackage{pgfplots}
+% bibliography
+\usepackage[citestyle=authortitle-ibid]{biblatex}
 % random text
 \usepackage{lipsum}
 % links
 \usepackage{hyperref}
+% glossary (must be after links)
+\usepackage[toc,nonumberlist]{glossaries}
 
 \renewcommand{\familydefault}{\sfdefault}
+
+%%% Bibliography
+\addbibresource{bibliography.bib}
+%%%%%%
+
+%%% Glossar
+\makeglossaries
+\loadglsentries{glossary.tex}
+%%%%%%
 
 \pagestyle{fancy}
 \setminted{
@@ -42,6 +56,7 @@
 %\color[rgb]{1,1,1} %white
 %%%
 
+
 %%% Titlepage
 \subject{Jannis' \LaTeX~template}
 \title{Hello World!}
@@ -56,6 +71,7 @@
 \tableofcontents
 
 \chapter{Hello World!}
+\Gls{foo}
 
 \section{tcolorbox}
 \begin{tcolorbox}[colback=red!5!white,colframe=red!75!black,title=My nice heading]
@@ -86,6 +102,7 @@
 
 On \autoref{fgr:porsche} you can see a Porsche 911 GT4 RS.
 You can buy it on \url{https://www.porsche.com}.
+\footcite{imni}
 
 \section{table}
 
@@ -226,5 +243,11 @@ def incmatrix(genl1,genl2):
 \end{axis}
 \end{tikzpicture}
 
-\end{document}
 
+%%%%%%
+\glsaddall
+\printglossaries
+\printbibliography[heading=bibintoc]
+%%%%%%
+
+\end{document}
