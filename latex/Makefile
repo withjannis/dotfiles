@@ -1,5 +1,5 @@
 run:
-	sudo docker run -i --rm \
+	podman run -i --rm \
 	--name latex \
 	-v ${PWD}:/usr/src/app \
 	-w /usr/src/app \
